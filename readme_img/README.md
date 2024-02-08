@@ -3,7 +3,7 @@ Conception d'un Site Web Thématique : Médicaments et Cinéma/Manga/Passion
 
 Création d'un site web innovant qui fusionne le thème des "médicaments" avec celui du "cinéma" ,"manga"  ou "passion" en PHP
 
-![capture d'écran](image.png)
+![capture d'écran](image-1.png)
 
 **Contexte du projet**
 
