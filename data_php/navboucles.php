@@ -1,6 +1,6 @@
 
 <!-- boucles nav -->
-<?php include 'data_php/navtableau.php';
+<?php require_once dirname(__DIR__) . '/data_php/navtableau.php';
  
 foreach ($onglets as $value) {
     echo '<li class="nav-item py-3">

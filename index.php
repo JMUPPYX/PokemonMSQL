@@ -21,26 +21,20 @@ require_once __DIR__ . "/function/index.fn.php";
       </div>
     </div>
   </section>
-  <?php
-  // si la potion n'existe pas c'est  le choix 3 par defaut qui s'affiche
-  if (!isset($_POST['Les_potions'])) {
-    $_POST['Les_potions'] = 2;
-  }
-  $potions = findBestpotions($db, $_POST['Les_potions']);
-  ?>
 
-  <form class="m-2 col-3" method="post" action="index.php">
+
+  <form class="m-auto w-50" method="POST" action="index.php">
     <label class="m-2" for="Les_potions">Les potions :</label>
-    <select class="form-select m-2" name="Les_potions" aria-label="Default select example" placeholder=""
-      value=<?= $_POST['Les_potions'] ?>>
-      <option value="2">Les moins cher</option>
-      <option value="4">Les plus cher</option>
+    <select class="form-select m-2" name="Les_potions" aria-label="Default select example">
+      <option selected value="">Tous les produits</option>
+      <option value="ASC">Les moins cher</option>
+      <option value="DESC">Les plus cher</option>
     </select>
     <button class="m-2" type="submit">Sélectionner</button>
   </form>
   <?php foreach ($potions as $potion) { ?>
-    <p>
-      <a href="mapage.php?id=<?= $potion['id'] ?>">
+    <p class="d-flex flex-wrap justify-content-center" >
+      <a class="text-decoration-none text-dark" href="mapage.php?id=<?= $potion['id'] ?>">
         <?= $potion['name'] ?>
       </a>
     </p>

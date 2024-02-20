@@ -13,7 +13,7 @@
   require_once __DIR__ . ('/function/mapage.fn.php');
   $potions = findPotionsById($db, $_GET['id']);
   $name = $potions['name'];
-  $pictures = findPictureByPotions($db);
+  $pictures = findPictureByPotions($db,$_GET['id']);
  $path=$pictures ['pathimg'];
   
  // on rappel notre cards qui contien la mise en forme HTML/CSS et les champs de notre base de données

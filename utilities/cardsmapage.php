@@ -1,5 +1,6 @@
 <!-- page MAPAGE -->
 <!-- cards des potions -->
+
 <div class="container col-6 mb-5 ">
     <div class="card  text-center">
         <h1>Détail</h1>
@@ -19,7 +20,7 @@
                 <p>Drugstore :
                     <?= $potions['drugstores'] ?>
                 </p>
-                <div class="d-flex justify-content-around my-2">
+                <div class="d-flex flex-wrap justify-content-around my-2">
                     <span class="badge bg-primary">
                         <p>Prix :
                             <?= $potions['prix'] ?>

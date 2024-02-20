@@ -6,7 +6,8 @@
 }
 
 body{
-    background: linear-gradient(rgb(33, 151, 234), pink);
+    /* background: linear-gradient(rgb(33, 151, 234), pink);
+    background-repeat: no-repeat; */
 }
 
 /* header */
@@ -30,6 +31,32 @@ footer{
 }
 .pe-90{
     padding-right: 90px;
+}
+
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, .2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }
 
 

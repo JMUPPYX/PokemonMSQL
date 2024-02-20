@@ -10,7 +10,7 @@
         mélange d’ingrédients : elles sont le lien entre nous et nos fidèles compagnons.
         Alors, que tes aventures soient épiques et tes potions toujours à portée de main.
     </p>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3 mx-0 mx-md-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3 mx-0 mx-md-5">
         <?php
         foreach ($potions as $value) { ?>
             <div class="col mb-5">
@@ -26,7 +26,7 @@
                             <?= $value['effect'] ?>
                         </h5>
                         <h4 class="card-text text-warning fs-5 text">Note :
-                            <?= $value['note'] . '/10 &nbsp;' ?>
+                            <?= $value['note'] . '/10 &nbsp;'?>
                         </h4>
                         <p class="card-text text-uppercase fw-bold">
                             <?= $value['prix'] ?> Pokedollars
@@ -34,7 +34,7 @@
                         <p class="card-text text-uppercase fw-bold">Drugstores :
                             <?= $value['drugstore'] ?>
                         </p>
-                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                        <a href="index.php" class="btn btn-primary">Ajouter au panier</a>
                     </div>
                 </div>
             </div>

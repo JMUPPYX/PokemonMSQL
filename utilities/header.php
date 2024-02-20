@@ -41,9 +41,8 @@ $db = getPDOlink($config);
                     <div class="">
                         <ul class="navbar-nav mb-2 mb-lg-0 h-100 px-2 ">
                             <!-- lien de la boucle nav -->
-                            <?php include "data_php/navboucles.php" ?>
+                            <?php require_once dirname(__DIR__) . '/data_php/navboucles.php'; ?>
                         </ul>
-                        
                     </div>
                 </div>
                 <a class="text-decoration-none" href="index.php">
@@ -53,8 +52,6 @@ $db = getPDOlink($config);
                         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </a>
-            </div>
-            
-                        
+            </div>            
         </nav>
     </header>
