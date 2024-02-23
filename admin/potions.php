@@ -3,16 +3,13 @@
 <?php 
     require_once dirname(__DIR__) . "/utilities/header.php";
     require_once dirname(__DIR__) . "/function/potions.fn.php";
-// recupere les données de la table potions et les tables effects + medecins
+    // recupere les données de la table potions et les tables effects + medecins
     $potions = findAllPotions($db);
-
     // var_dump($potions);
 ?>
 
-
 <!--   requete pour selectionner tous les produits / reprendre une fonction -->
 <!-- afficher les éléments -->
-
 <section class="intro">
   <div class="bg-image h-100" style="background-color: #6095F0;">
   <div class="mask d-flex align-items-center h-100">
@@ -56,6 +53,7 @@
                       <td><?=$row['medecin']?></td>
                       <td><?=$row['effect']?></td>
                       <td>
+                        <!-- renvoi sur le fichier edit.php en utilisant l'id -->
                         <a class="btn btn-primary mt-auto" href="edit.php?id=<?=$row['id']?>">MODIFIER</a>
                       </td>
                     </tr>
@@ -71,10 +69,5 @@
   </div>
 </div>
 </section>
-
-
-
-
-
 
 <?php require_once dirname(__DIR__) . "/utilities/footer.php"; ?>

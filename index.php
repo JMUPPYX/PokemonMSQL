@@ -6,8 +6,8 @@ require_once __DIR__ . "/utilities/header.php";
 require_once __DIR__ . "/function/index.fn.php";
 
 // var_dump (getPDOlink ($config));
-
 ?>
+
 <main>
   <!-- slider -->
   <section class="d-flex justify-content-center pt-5">
