@@ -1,4 +1,5 @@
 <?php
+
 // AJOUTER
 // requête pour récuperer les elements de la table medecin
 $medecins = "SELECT * FROM medecins";
@@ -6,7 +7,7 @@ $stath = $db->query($medecins);
 $docteurs = $stath->fetchAll(); 
 //  var_dump($docteurs);
 
- // requête pour récuperer les elements de la table medecin
+ // requête pour récuperer les elements de la table sideffects
  $sideffects = "SELECT * FROM sideffects";
  $stath = $db->query($sideffects);
  $effects = $stath->fetchAll(); 
@@ -32,7 +33,7 @@ $drugstores =$_POST['drugstore'];
 
 try {
   
-  $db->beginTransaction();
+$db->beginTransaction();
 // champ de la table potions
 $sql = "INSERT INTO potions(`name`, `couleur`, `contenanceML`,`prix`,`note`,`medecinID`,`sideffectID`) 
 VALUES ('$nom','$couleur','$contenance','$prix','$note','$medecins_id','$effects_id')";
@@ -54,9 +55,8 @@ $db->commit();
   echo "erreur" .$e->getMessage();
 }
 }
-
-
 ?>
+
 <div class="d-flex flex-column justify-content-center align-items-center">
   <h1 class="py-3">Formulaire admin</h1>
   <form action="#" method="POST">

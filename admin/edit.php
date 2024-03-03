@@ -3,7 +3,9 @@ require_once dirname(__DIR__) . "/utilities/header.php";
 require_once dirname(__DIR__) . "/function/potions.fn.php";
 // fonction qui va récuperer l'ID
 $potion = findPotionsById($db, $_GET['id']);
-// var_dump($potion);
+$medecins = AllMedecins($db);
+$sideffects = AllSideffects($db);
+// var_dump($update);
 ?>
 
 <section class="d-flex justify-content-center py-5 m-auto">
@@ -37,18 +39,18 @@ $potion = findPotionsById($db, $_GET['id']);
                         <input type="text" class="form-control my-3 border border-dark" placeholder="note" name="note"
                             value="<?php echo $potion['note'] ?>">
                     </div>
-                    <select class="form-select border border-dark my-3" aria-label="Default select example" name="medecin">
-                        <option selected>Selectionner le Medecin</option>
-                        <?php foreach ($medecin as $row): ?>
+                    <select class="form-select border border-dark my-3" aria-label="Default select example" name="medecins">
+                        <option selected value="<?php echo $potion['medecinID'] ?>" ><?php echo $potion['medecin'] ?></option>
+                        <?php foreach ($medecins as $row): ?>
                             <option value="<?= $row["id"] ?>">
                                 <?= $row["medecin"] ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
 
-                    <select class="form-select border border-dark my-3" aria-label="Default select example" name="sideffect">
-                        <option selected>Selectionner l'Effect</option>
-                        <?php foreach ($sideffect as $row): ?>
+                    <select class="form-select border border-dark my-3" aria-label="Default select example" name="sideffects">
+                        <option selected value="<?php echo $potion['sideffectID'] ?>"><?php echo $potion['effect'] ?></option>
+                        <?php foreach ($sideffects as $row): ?>
                             <option value="<?= $row["id"] ?>">
                                 <?= $row["effect"] ?>
                             </option>

@@ -32,6 +32,7 @@ function lessPotions($db) {
     $potions = $requete->fetchAll();
     return $potions ;
   }
+
  
 // si ($_POST['Les_potions']) est égale à 1 alors  on appelle la fonction lessPotions 
 //sinon si est égale à 1 alors  on appelle la fonction expansivePotions 
